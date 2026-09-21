@@ -374,3 +374,18 @@ a:focus-visible, button:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 4px;
 }
+.entry-points {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0;
+}
+.entry-points li {
+    padding-left: 1rem;
+    position: relative;
+    opacity: 0.85;
+}
+.entry-points li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+}
