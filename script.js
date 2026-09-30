@@ -1,17 +1,17 @@
 /**
- * Usability enhancement: 
- * Tracks the user's scroll position and highlights the active 
- * navigation link in the sidebar so the user always knows 
- * their structural location on the page.
+ * -------------------------------------------------------------
+ * ACTIVE NAVIGATION
+ *
+ * Tracks the user's scroll position and highlights the active
+ * navigation link in the sidebar.
+ * -------------------------------------------------------------
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+
     const sections = document.querySelectorAll('.ledger-section');
     const navLinks = document.querySelectorAll('.nav-link');
-    
-    // Intersection Observer options
-    // The margin ensures the active state triggers just before the 
-    // section hits the very top of the viewport.
+
     const observerOptions = {
         root: null,
         rootMargin: '-20% 0px -80% 0px',
@@ -19,26 +19,105 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const sectionObserver = new IntersectionObserver((entries) => {
+
         entries.forEach(entry => {
+
             if (entry.isIntersecting) {
-                // Remove active class from all links
+
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
-                
-                // Add active class to the link matching the section in view
+
                 const activeId = entry.target.getAttribute('id');
-                const activeLink = document.querySelector(`.nav-link[href="#${activeId}"]`);
-                
+
+                const activeLink =
+                    document.querySelector(`.nav-link[href="#${activeId}"]`);
+
                 if (activeLink) {
                     activeLink.classList.add('active');
                 }
             }
+
         });
+
     }, observerOptions);
 
-    // Observe all main sections
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
+
+});
+
+
+/**
+ * -------------------------------------------------------------
+ * DARK / LIGHT THEME
+ * -------------------------------------------------------------
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const toggleButton = document.getElementById('theme-toggle');
+
+    if (!toggleButton) {
+        return;
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+
+    const systemPrefersDark =
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+
+    /*
+     * Determine initial theme.
+     *
+     * Priority:
+     * 1. User's saved preference
+     * 2. System preference
+     * 3. Light mode
+     */
+
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+
+        document.documentElement.setAttribute(
+            'data-theme',
+            savedTheme
+        );
+
+    } else {
+
+        document.documentElement.setAttribute(
+            'data-theme',
+            systemPrefersDark ? 'dark' : 'light'
+        );
+
+    }
+
+
+    /*
+     * Toggle theme when button is clicked.
+     */
+
+    toggleButton.addEventListener('click', () => {
+
+        const currentTheme =
+            document.documentElement.getAttribute('data-theme');
+
+        const newTheme =
+            currentTheme === 'dark' ? 'light' : 'dark';
+
+
+        document.documentElement.setAttribute(
+            'data-theme',
+            newTheme
+        );
+
+        localStorage.setItem(
+            'theme',
+            newTheme
+        );
+
+    });
+
 });

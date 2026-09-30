@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Utsho Das | Usable Security Researcher</title>
-    
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="/assets/icon.png">
-    
+
     <!-- Typography: Plus Jakarta for headings, Inter for reading, JetBrains Mono for metadata -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.counter.dev/script.js" data-id="591b42e9-82ba-4130-8117-340935f1af92" data-utcoffset="6"></script>
+
     <meta name="description" content="Utsho Das is a Computer Science researcher interested in usable security, human-computer interaction, privacy, and AI.">
+
     <meta name="google-site-verification" content="USoC8ntCHGPTMcap5AAcvPrPy6_4J1fbxQhSeHibI8g" />
+
     <link rel="canonical" href="https://utshodas.github.io/">
+
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -29,12 +35,44 @@
 
 <body>
 
+<div class="theme-toggle-container">
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+
+        <!-- Moon icon -->
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3
+                     7 7 0 0 0 21 12.79z"></path>
+        </svg>
+
+        <!-- Sun icon -->
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+
+    </button>
+</div>
+
 <div class="layout-grid">
+
     <header class="sidebar">
+
         <div class="profile-header">
             <img src="assets/utsho.jpg" alt="Utsho Das" class="profile-photo">
+
             <h1>Utsho Das</h1>
-            <p class="role">Usable security Researcher<br>& Associate Database Engineer </p>
+
+            <p class="role">
+                Usable security Researcher<br>
+                & Associate Database Engineer
+            </p>
         </div>
 
         <nav class="table-of-contents" aria-label="Main Navigation">
@@ -47,150 +85,358 @@
         </nav>
 
         <div class="contact-info">
-            <a href="https://scholar.google.com/citations?user=_xyCDVQAAAAJ&hl=en&oi=sra" class="action-link">Scholar</a>
-            <a href="mailto:dasutsho01@gmail.com" class="action-link">Email</a>
-            <a href="https://github.com/Utshodas" target="_blank" rel="noopener noreferrer" class="action-link">GitHub</a>
-            <a href="https://www.linkedin.com/in/utsho-das-105746275/" target="_blank" rel="noopener noreferrer" class="action-link">LinkedIn</a>
-            <a href="https://leetcode.com/u/utshodas2001325/" target="_blank" rel="noopener noreferrer" class="action-link">LeetCode</a>
+            <a href="https://scholar.google.com/citations?user=_xyCDVQAAAAJ&hl=en&oi=sra" class="action-link">
+                Scholar
+            </a>
+
+            <a href="mailto:dasutsho01@gmail.com" class="action-link">
+                Email
+            </a>
+
+            <a href="https://github.com/Utshodas" target="_blank" rel="noopener noreferrer" class="action-link">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/utsho-das-105746275/" target="_blank" rel="noopener noreferrer" class="action-link">
+                LinkedIn
+            </a>
+
+            <a href="https://leetcode.com/u/utshodas2001325/" target="_blank" rel="noopener noreferrer" class="action-link">
+                LeetCode
+            </a>
         </div>
+
     </header>
 
+
     <main class="content">
-        
+
+        <!-- ABOUT -->
         <section id="about" class="ledger-section">
+
             <h2 class="section-title">About</h2>
+
             <div class="prose">
-                <p>I'm a Computer Science graduate (2019-2025) from Shahjalal University of Science and Technology, Bangladesh. I'm interested in usable security and privacy, mostly why people misunderstand systems that are supposed to protect them, and how that shows up in the mental models people build around AI permissions and everyday security tools.</p>
 
-                <p>My recent work includes CyQured (SOUPS 2026), a tabletop game I built and tested for teaching personal cybersecurity, and an ongoing project on how people understand permissions and access in AI driven messaging, productivity, and finance apps.</p>
+                <p>
+                    I'm a Computer Science graduate (2019-2025) from Shahjalal University of Science and Technology, Bangladesh.
+                    I'm interested in usable security and privacy, mostly why people misunderstand systems that are supposed to protect them,
+                    and how that shows up in the mental models people build around AI permissions and everyday security tools.
+                </p>
 
-                <p>I currently work as an Associate Database Engineer at Therap (BD) Ltd., where I administer Oracle databases for a healthcare platform.</p>
+                <p>
+                    My recent work includes CyQured (SOUPS 2026), a tabletop game I built and tested for teaching personal cybersecurity,
+                    and an ongoing project on how people understand permissions and access in AI driven messaging, productivity, and finance apps.
+                </p>
 
-                <p>What pulls me toward a PhD is a simple question: why systems that are technically secure so often fail the people who have to use them, and what it would actually take to close that gap.</p>
+                <p>
+                    I currently work as an Associate Database Engineer at Therap (BD) Ltd., where I administer Oracle databases for a healthcare platform.
+                </p>
+
+                <p>
+                    What pulls me toward a PhD is a simple question: why systems that are technically secure so often fail the people who have to use them,
+                    and what it would actually take to close that gap.
+                </p>
+
                 <div class="actions">
-                    <a href="assets/CV.pdf" target="_blank" class="button">View Curriculum Vitae</a>
+                    <a href="assets/CV.pdf" target="_blank" class="button">
+                        View Curriculum Vitae
+                    </a>
                 </div>
+
             </div>
+
         </section>
 
+
+        <!-- EXPERIENCE -->
         <section id="experience" class="ledger-section">
+
             <h2 class="section-title">Experience</h2>
-            
+
             <article class="ledger-entry">
+
                 <header class="entry-header">
                     <h3 class="entry-title">Associate Database Engineer</h3>
                     <span class="entry-meta">July 2025 - Present</span>
                 </header>
-                <p class="entry-subtitle">Therap(BD) Ltd. • Dhaka, Bangladesh</p>
+
+                <p class="entry-subtitle">
+                    Therap(BD) Ltd. • Dhaka, Bangladesh
+                </p>
+
                 <ul class="entry-list">
-                    <li>Develop Oracle SQL solutions and administer enterprise healthcare databases through performance optimization, patch management, and maintenance.</li>
-                    <li>Implement and maintain database security controls, including Oracle Database Vault, role-based access control, and privileged access restrictions.</li>
-                    <li>Support HIPAA compliance by safeguarding Protected Health Information (PHI) through secure, least-privilege database practices.</li>
+                    <li>
+                        Develop Oracle SQL solutions and administer enterprise healthcare databases through performance optimization,
+                        patch management, and maintenance.
+                    </li>
+
+                    <li>
+                        Implement and maintain database security controls, including Oracle Database Vault,
+                        role-based access control, and privileged access restrictions.
+                    </li>
+
+                    <li>
+                        Support HIPAA compliance by safeguarding Protected Health Information (PHI)
+                        through secure, least-privilege database practices.
+                    </li>
                 </ul>
+
             </article>
+
         </section>
 
+
+        <!-- RESEARCH -->
         <section id="research" class="ledger-section">
+
             <h2 class="section-title">Research & Publications</h2>
 
             <article class="ledger-entry">
+
                 <header class="entry-header">
-                    <h3 class="entry-title">CyQured: Design, Development, and Empirical Evaluation of a Tabletop Game for Personal Cybersecurity Education</h3>
+                    <h3 class="entry-title">
+                        CyQured: Design, Development, and Empirical Evaluation of a Tabletop Game for Personal Cybersecurity Education
+                    </h3>
+
                     <span class="entry-meta">SOUPS 2026</span>
                 </header>
-                <p class="entry-description">Designed and empirically evaluated a tabletop game to improve personal cybersecurity awareness through interactive gameplay involving digital assets, cyberattacks, and defense mechanisms.</p>
+
+                <p class="entry-description">
+                    Designed and empirically evaluated a tabletop game to improve personal cybersecurity awareness through interactive gameplay involving digital assets, cyberattacks, and defense mechanisms.
+                </p>
+
                 <ul class="entry-points">
-                    <li>Designed and ran the study — recruited 50 participants split by security background, plus a separate 20-person control group to rule out simple retest effects</li>
-                    <li>Handled the full analysis: paired and Welch's t-tests, a linear mixed-effects model to account for group-based play, effect sizes, and thematic coding of interview transcripts</li>
-                    <li>Wrote the paper</li>
-                    <li>Contributed to game and card design — the STRIDE-mapped attack/defense cards and the Monte Carlo simulation used to place high-risk devices on the board</li>
-                    <li>The main finding: even the group that struggled most with the game's mechanics learned just as much as everyone else. High perceived usefulness seemed to carry people through a clunky experience, which says as much about design as it does about learning</li>
+                    <li>
+                        Designed and ran the study — recruited 50 participants split by security background,
+                        plus a separate 20-person control group to rule out simple retest effects
+                    </li>
+
+                    <li>
+                        Handled the full analysis: paired and Welch's t-tests, a linear mixed-effects model to account for group-based play,
+                        effect sizes, and thematic coding of interview transcripts
+                    </li>
+
+                    <li>
+                        Wrote the paper
+                    </li>
+
+                    <li>
+                        Contributed to game and card design — the STRIDE-mapped attack/defense cards and the Monte Carlo simulation used to place high-risk devices on the board
+                    </li>
+
+                    <li>
+                        The main finding: even the group that struggled most with the game's mechanics learned just as much as everyone else.
+                        High perceived usefulness seemed to carry people through a clunky experience, which says as much about design as it does about learning
+                    </li>
                 </ul>
+
                 <div class="tags">
-                    <a href="https://www.usenix.org/conference/soups2026/presentation/das" class="inline-link">Read Paper</a>
+                    <a href="https://www.usenix.org/conference/soups2026/presentation/das" class="inline-link">
+                        Read Paper
+                    </a>
                 </div>
+
             </article>
 
+
             <article class="ledger-entry">
+
                 <header class="entry-header">
-                    <h3 class="entry-title">A Deep Learning Approach to Automate Classification of Arsenic-Affected Skin using EfficientNet-B1</h3>
+                    <h3 class="entry-title">
+                        A Deep Learning Approach to Automate Classification of Arsenic-Affected Skin using EfficientNet-B1
+                    </h3>
+
                     <span class="entry-meta">ICCIT 2024</span>
                 </header>
-                <p class="entry-description">Achieved 94.69% accuracy in arsenic-affected skin classification using EfficientNet-B1, outperforming VGG-19, ResNet-50, and MobileNet-v2.</p>
+
+                <p class="entry-description">
+                    Achieved 94.69% accuracy in arsenic-affected skin classification using EfficientNet-B1,
+                    outperforming VGG-19, ResNet-50, and MobileNet-v2.
+                </p>
+
                 <ul class="entry-points">
-                    <li>Built and compared five CNN architectures: VGG-19, ResNet-50, MobileNetV2, and two EfficientNet variants</li>
-                    <li>Involved across the full pipeline - data prep and augmentation, training and tuning, and digging into why EfficientNet-B1 outperformed the rest</li>
-                    <li>Takeaway that stuck: 94.69% accuracy still meant 71 missed cases - a reminder that headline metrics don't tell the whole story for a screening tool</li>
+                    <li>
+                        Built and compared five CNN architectures: VGG-19, ResNet-50, MobileNetV2,
+                        and two EfficientNet variants
+                    </li>
+
+                    <li>
+                        Involved across the full pipeline - data prep and augmentation, training and tuning,
+                        and digging into why EfficientNet-B1 outperformed the rest
+                    </li>
+
+                    <li>
+                        Takeaway that stuck: 94.69% accuracy still meant 71 missed cases -
+                        a reminder that headline metrics don't tell the whole story for a screening tool
+                    </li>
                 </ul>
-                <a href="assets/iccit.pdf" class="inline-link">Read Paper</a>
+
+                <a href="assets/iccit.pdf" class="inline-link">
+                    Read Paper
+                </a>
+
             </article>
 
+
             <article class="ledger-entry">
+
                 <header class="entry-header">
-                    <h3 class="entry-title">Project PRIMUS at EHRSQL 2024: Text-to-SQL Generation using Large Language Model for EHR Analysis</h3>
+                    <h3 class="entry-title">
+                        Project PRIMUS at EHRSQL 2024: Text-to-SQL Generation using Large Language Model for EHR Analysis
+                    </h3>
+
                     <span class="entry-meta">Clinical NLP 2024</span>
                 </header>
-                <p class="entry-description">Developed a transformer-based Text-to-SQL system using SQLCoders with schema-aware prompting for Electronic Health Record analysis.</p>
+
+                <p class="entry-description">
+                    Developed a transformer-based Text-to-SQL system using SQLCoders with schema-aware prompting for Electronic Health Record analysis.
+                </p>
+
                 <ul class="entry-points">
-                    <li>Helped run the sqlcoders model against the EHRSQL workshop's benchmark question-SQL pairs</li>
-                    <li>What stood out is that, scores looked reasonable under lenient grading, then dropped sharply once the workshop's penalty-based scoring kicked in; a good illustration of how much evaluation choices can swing perceived performance</li>
+                    <li>
+                        Helped run the sqlcoders model against the EHRSQL workshop's benchmark question-SQL pairs
+                    </li>
+
+                    <li>
+                        What stood out is that, scores looked reasonable under lenient grading,
+                        then dropped sharply once the workshop's penalty-based scoring kicked in;
+                        a good illustration of how much evaluation choices can swing perceived performance
+                    </li>
                 </ul>
-                <a href="https://aclanthology.org/2024.clinicalnlp-1.41.pdf" class="inline-link">Read Paper</a>
+
+                <a href="https://aclanthology.org/2024.clinicalnlp-1.41.pdf" class="inline-link">
+                    Read Paper
+                </a>
+
             </article>
+
 
             <article class="ledger-entry">
+
                 <header class="entry-header">
-                    <h3 class="entry-title">Understanding End-User Mental Models of AI Agent Permissions Across Everyday Platforms</h3>
+                    <h3 class="entry-title">
+                        Understanding End-User Mental Models of AI Agent Permissions Across Everyday Platforms
+                    </h3>
+
                     <span class="entry-meta">Ongoing</span>
                 </header>
-                <p class="entry-description">Investigating how end-users understand AI agent permissions across platforms using interviews and card-sorting tasks to derive safer AI design recommendations.</p>
+
+                <p class="entry-description">
+                    Investigating how end-users understand AI agent permissions across platforms using interviews and card-sorting tasks to derive safer AI design recommendations.
+                </p>
+
                 <ul class="entry-points">
-                    <li>Built the full interview protocol — participants think aloud through four real permission screens (messaging, email/Drive, an AI agent, mobile payment)</li>
-                    <li>Designed card-sorting tasks per domain to expose the gap between what people think they're allowing and what they're actually allowing</li>
-                    <li>Added controls like counterbalanced scenario order and probes to classify each person's mental model (observer, assistant, delegate, fully autonomous)</li>
-                    <li>Currently synthesizing findings into concrete design recommendations for permission screens</li>
+                    <li>
+                        Built the full interview protocol — participants think aloud through four real permission screens
+                        (messaging, email/Drive, an AI agent, mobile payment)
+                    </li>
+
+                    <li>
+                        Designed card-sorting tasks per domain to expose the gap between what people think they're allowing
+                        and what they're actually allowing
+                    </li>
+
+                    <li>
+                        Added controls like counterbalanced scenario order and probes to classify each person's mental model
+                        (observer, assistant, delegate, fully autonomous)
+                    </li>
+
+                    <li>
+                        Currently synthesizing findings into concrete design recommendations for permission screens
+                    </li>
                 </ul>
+
             </article>
+
         </section>
 
+
+        <!-- PROJECTS -->
         <section id="projects" class="ledger-section">
+
             <h2 class="section-title">Projects</h2>
-            
+
             <div class="grid-2-col">
+
                 <div class="card">
                     <h3 class="card-title">E-Shop</h3>
-                    <p class="card-desc">MERN stack-based e-commerce platform featuring active APIs for payment, product management, and inventory.</p>
-                    <a href="https://github.com/Utshodas/E-shop" class="inline-link">View Source</a>
+
+                    <p class="card-desc">
+                        MERN stack-based e-commerce platform featuring active APIs for payment,
+                        product management, and inventory.
+                    </p>
+
+                    <a href="https://github.com/Utshodas/E-shop" class="inline-link">
+                        View Source
+                    </a>
                 </div>
+
 
                 <div class="card">
                     <h3 class="card-title">ServiceHub</h3>
-                    <p class="card-desc">A comprehensive platform built using EJS, JavaScript, and MySQL for connecting service providers with consumers.</p>
-                    <a href="https://github.com/Utshodas/serviceHub" class="inline-link">View Source</a>
+
+                    <p class="card-desc">
+                        A comprehensive platform built using EJS, JavaScript, and MySQL for connecting service providers with consumers.
+                    </p>
+
+                    <a href="https://github.com/Utshodas/serviceHub" class="inline-link">
+                        View Source
+                    </a>
                 </div>
+
 
                 <div class="card">
                     <h3 class="card-title">Ride-with-the-wave</h3>
-                    <p class="card-desc">An endless runner game developed in Java, utilizing JavaFX for the graphical user interface and control systems.</p>
-                    <a href="https://github.com/Utshodas/Ride-With-the-Wav" class="inline-link">View Source</a>
+
+                    <p class="card-desc">
+                        An endless runner game developed in Java, utilizing JavaFX for the graphical user interface and control systems.
+                    </p>
+
+                    <a href="https://github.com/Utshodas/Ride-With-the-Wav" class="inline-link">
+                        View Source
+                    </a>
                 </div>
+
 
                 <div class="card">
                     <h3 class="card-title">Home Automation System</h3>
-                    <p class="card-desc">Hardware-integrated smart automation and security solution utilizing Arduino and ESP32 microcontrollers.</p>
-                    <a href="https://www.youtube.com/watch?v=95BEcm2jNTM" class="inline-link">Watch Demo</a>
+
+                    <p class="card-desc">
+                        Hardware-integrated smart automation and security solution utilizing Arduino and ESP32 microcontrollers.
+                    </p>
+
+                    <a href="https://www.youtube.com/watch?v=95BEcm2jNTM" class="inline-link">
+                        Watch Demo
+                    </a>
                 </div>
+
             </div>
+
         </section>
+
+
+        <!-- ACADEMICS -->
         <section id="academics" class="ledger-section">
+
             <h2 class="section-title">Academic Profile</h2>
 
             <article class="ledger-entry">
+
                 <header class="entry-header">
-                    <h3 class="entry-title">Shahjalal University of Science and Technology</h3>
-                    <span class="entry-meta">Session: 2019 - 2025 · Graduated: July, 2025</span>
+                    <h3 class="entry-title">
+                        Shahjalal University of Science and Technology
+                    </h3>
+
+                    <span class="entry-meta">
+                        Session: 2019 - 2025 · Graduated: July, 2025
+                    </span>
                 </header>
-                <p class="entry-subtitle">B.Sc. in Computer Science &amp; Engineering</p>
+
+                <p class="entry-subtitle">
+                    B.Sc. in Computer Science &amp; Engineering
+                </p>
+
                 <ul class="entry-list">
                     <li>CGPA: 3.71 / 4.00</li>
                     <li>Final Two Years GPA: 3.85 / 4.00 (75.5 credits)</li>
@@ -198,77 +444,147 @@
 
             </article>
 
+
             <article class="ledger-entry">
+
                 <header class="entry-header">
                     <h3 class="entry-title">Standardized Tests</h3>
                 </header>
+
                 <ul class="entry-list">
                     <li>GRE: 326 (Quant: 167, Verbal: 159, AWA: 3.5)</li>
                 </ul>
+
                 <ul class="entry-list">
-                    <li>IELTS: 8.0 (Listening: 9.0, Reading: 8.5, Writing: 7.0, Speaking: 7.0)</li>
+                    <li>
+                        IELTS: 8.0 (Listening: 9.0, Reading: 8.5, Writing: 7.0, Speaking: 7.0)
+                    </li>
                 </ul>
+
             </article>
+
         </section>
 
+
+        <!-- SKILLS -->
         <section id="skills" class="ledger-section">
+
             <h2 class="section-title">Technical Skills</h2>
-            
+
             <div class="skills-grid">
+
                 <div class="skill-category">
                     <h3 class="category-name">HCI & User Research</h3>
-                    <p class="skill-list">User Study Design, Semi-Structured Interviews, Think-Aloud Studies, Card Sorting, Usability Evaluation</p>
+                    <p class="skill-list">
+                        User Study Design, Semi-Structured Interviews, Think-Aloud Studies,
+                        Card Sorting, Usability Evaluation
+                    </p>
                 </div>
 
-            <div class="skill-category">
-                <h3 class="category-name">Research Methods</h3>
-                <p class="skill-list">Mixed-Methods Research, Survey Research, Qualitative and Quantitative Analysis, Thematic Analysis</p>
-            </div>
+
+                <div class="skill-category">
+                    <h3 class="category-name">Research Methods</h3>
+                    <p class="skill-list">
+                        Mixed-Methods Research, Survey Research, Qualitative and Quantitative Analysis,
+                        Thematic Analysis
+                    </p>
+                </div>
+
 
                 <div class="skill-category">
                     <h3 class="category-name">Research Tools</h3>
-                    <p class="skill-list">Python, Jupyter Notebook, pandas, NumPy, scikit-learn</p>
+                    <p class="skill-list">
+                        Python, Jupyter Notebook, pandas, NumPy, scikit-learn
+                    </p>
                 </div>
+
 
                 <div class="skill-category">
                     <h3 class="category-name">Programming</h3>
-                    <p class="skill-list">Python, Java, C++, JavaScript, Dart, LaTeX</p>
+                    <p class="skill-list">
+                        Python, Java, C++, JavaScript, Dart, LaTeX
+                    </p>
                 </div>
+
 
                 <div class="skill-category">
                     <h3 class="category-name">Web & Backend</h3>
-                    <p class="skill-list">React, Node.js, Express.js, HTML, CSS, Bootstrap</p>
+                    <p class="skill-list">
+                        React, Node.js, Express.js, HTML, CSS, Bootstrap
+                    </p>
                 </div>
+
 
                 <div class="skill-category">
                     <h3 class="category-name">Databases & Cloud</h3>
-                    <p class="skill-list">Oracle, MySQL, MongoDB, AWS</p>
+                    <p class="skill-list">
+                        Oracle, MySQL, MongoDB, AWS
+                    </p>
                 </div>
+
 
                 <div class="skill-category">
                     <h3 class="category-name">Development Tools</h3>
-                    <p class="skill-list">Git, GitHub, Docker, VS Code, Postman</p>
+                    <p class="skill-list">
+                        Git, GitHub, Docker, VS Code, Postman
+                    </p>
                 </div>
+
             </div>
-            
+
+
             <div class="problem-solving">
-                <p><strong>Problem Solving:</strong> Solved 700+ algorithmic problems across Codeforces, LeetCode, LightOJ, and UVa.</p>
+                <p>
+                    <strong>Problem Solving:</strong>
+                    Solved 700+ algorithmic problems across Codeforces, LeetCode, LightOJ, and UVa.
+                </p>
             </div>
+
         </section>
+
+
+        <!-- PERSONAL -->
         <section id="personal" class="ledger-section">
+
             <h2 class="section-title">Off the Clock</h2>
-            <p class="section-text">When I'm not working or doing research, I'm probably watching something. I'll watch movies from pretty much any genre, and I'm a big fan of sitcoms too. Ask me about a movie and I'll happily talk your ear off about it.</p>
-            <p class="section-text">I love food a little too much for my own good, and it shows up on me fast. That's part of why I started going to the gym recently. I'm there about four times a week now and actually keeping it up, which says a lot given how my interests usually go. I also like walking, especially somewhere rural and quiet, and I try to spend as much time as I can with my family.</p>
-            <p class="section-text">I tend to dive headfirst into whatever's caught my attention and read about it obsessively for a while. The catch is I don't always keep that up, my interest fades faster than I'd like. But when something actually sticks, I stay with it. I also like keeping up with tech news: new releases, what's changing, cyber breaches, new policies, that kind of thing. Geopolitics is another one I follow regularly, though what actually draws me in is less the event itself and more the reasoning behind it, the analysis and explanations of why a decision was made the way it was.</p>
+
+            <p class="section-text">
+                When I'm not working or doing research, I'm probably watching something.
+                I'll watch movies from pretty much any genre, and I'm a big fan of sitcoms too.
+                Ask me about a movie and I'll happily talk your ear off about it.
+            </p>
+
+            <p class="section-text">
+                I love food a little too much for my own good, and it shows up on me fast.
+                That's part of why I started going to the gym recently.
+                I'm there about four times a week now and actually keeping it up,
+                which says a lot given how my interests usually go.
+                I also like walking, especially somewhere rural and quiet,
+                and I try to spend as much time as I can with my family.
+            </p>
+
+            <p class="section-text">
+                I tend to dive headfirst into whatever's caught my attention and read about it obsessively for a while.
+                The catch is I don't always keep that up, my interest fades faster than I'd like.
+                But when something actually sticks, I stay with it.
+                I also like keeping up with tech news: new releases, what's changing,
+                cyber breaches, new policies, that kind of thing.
+                Geopolitics is another one I follow regularly, though what actually draws me in is less the event itself
+                and more the reasoning behind it, the analysis and explanations of why a decision was made the way it was.
+            </p>
+
         </section>
-        
+
+
         <footer class="site-footer">
             <p>Last updated September, 2026.</p>
         </footer>
 
     </main>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>

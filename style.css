@@ -4,15 +4,15 @@
     --bg-surface: #F3F4F6;
     --text-primary: #111827;
     --text-secondary: #4B5563;
-    --accent-color: #059669; /* Forest green: accessible and calm */
+    --accent-color: #059669;
     --accent-hover: #047857;
     --border-color: #E5E7EB;
-    
+
     /* Typography */
     --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
-    
+
     /* Spacing */
     --space-sm: 0.5rem;
     --space-md: 1.25rem;
@@ -20,7 +20,26 @@
     --space-xl: 6rem;
 }
 
-/* Reset & Base */
+
+/* -------------------------------------------------------------
+   DARK MODE
+------------------------------------------------------------- */
+
+[data-theme="dark"] {
+    --bg-page: #121212;
+    --bg-surface: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-color: #6ee7b7;
+    --accent-hover: #a7f3d0;
+    --border-color: #2d2d2d;
+}
+
+
+/* -------------------------------------------------------------
+   RESET & BASE
+------------------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,19 +57,36 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
+
+a {
+    color: inherit;
+}
+
+
+/* -------------------------------------------------------------
+   PROFILE PHOTO
+------------------------------------------------------------- */
 
 .profile-photo {
-    width: 120px;       /* Set a fixed width */
-    height: 120px;      /* Must match width for a perfect circle */
-    border-radius: 50%; /* This makes it round */
-    object-fit: cover; /* Ensures the image doesn't stretch, crops from center instead */
-    margin-bottom: var(--space-md); /* Space between photo and name */
-    border: 3px solid var(--border-color); /* Optional: subtle border to fit ledger theme */
-    display: block; /* Ensures proper alignment */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--space-md);
+    border: 3px solid var(--border-color);
+    display: block;
 }
 
-/* Layout */
+
+/* -------------------------------------------------------------
+   LAYOUT
+------------------------------------------------------------- */
+
 .layout-grid {
     display: flex;
     flex-direction: column;
@@ -60,20 +96,27 @@ body {
 }
 
 @media (min-width: 1024px) {
+
     .layout-grid {
         flex-direction: row;
         gap: var(--space-xl);
         padding: var(--space-lg);
     }
+
 }
 
-/* Sidebar Navigation */
+
+/* -------------------------------------------------------------
+   SIDEBAR NAVIGATION
+------------------------------------------------------------- */
+
 .sidebar {
     position: relative;
     padding-bottom: var(--space-lg);
 }
 
 @media (min-width: 1024px) {
+
     .sidebar {
         flex: 0 0 280px;
         position: sticky;
@@ -81,6 +124,7 @@ body {
         height: max-content;
         padding-bottom: 0;
     }
+
 }
 
 .profile-header h1 {
@@ -98,16 +142,18 @@ body {
 }
 
 .table-of-contents {
-    display: none; /* Hidden on mobile to save vertical space */
+    display: none;
     flex-direction: column;
     gap: var(--space-sm);
     margin-bottom: var(--space-lg);
 }
 
 @media (min-width: 1024px) {
+
     .table-of-contents {
         display: flex;
     }
+
 }
 
 .nav-link {
@@ -116,7 +162,10 @@ body {
     font-weight: 500;
     padding-left: 1rem;
     border-left: 2px solid transparent;
-    transition: all 0.2s ease;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .nav-link:hover {
@@ -135,10 +184,12 @@ body {
 }
 
 @media (min-width: 1024px) {
+
     .contact-info {
         flex-direction: column;
         gap: var(--space-sm);
     }
+
 }
 
 .action-link {
@@ -146,18 +197,26 @@ body {
     text-decoration: none;
     font-weight: 500;
     border-bottom: 1px solid var(--border-color);
-    transition: border-color 0.2s ease;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
 }
 
-.action-link:hover, .action-link:focus-visible {
+.action-link:hover,
+.action-link:focus-visible {
     border-bottom-color: var(--accent-color);
     color: var(--accent-color);
 }
 
-/* Main Content Area */
+
+/* -------------------------------------------------------------
+   MAIN CONTENT
+------------------------------------------------------------- */
+
 .content {
     flex: 1;
-    min-width: 0; /* Prevents flex blowout */
+    min-width: 0;
 }
 
 .ledger-section {
@@ -173,7 +232,11 @@ body {
     margin-bottom: var(--space-lg);
 }
 
-/* Typography & Content Elements */
+
+/* -------------------------------------------------------------
+   TYPOGRAPHY & CONTENT
+------------------------------------------------------------- */
+
 .prose {
     max-width: 65ch;
     font-size: 1.125rem;
@@ -192,14 +255,22 @@ body {
     border-radius: 4px;
     font-weight: 500;
     margin-top: var(--space-md);
-    transition: background-color 0.2s ease;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
-.button:hover, .button:focus-visible {
+.button:hover,
+.button:focus-visible {
     background-color: var(--accent-color);
 }
 
-/* Ledger Entries (Experience/Research) */
+
+/* -------------------------------------------------------------
+   LEDGER ENTRIES
+------------------------------------------------------------- */
+
 .ledger-entry {
     margin-bottom: var(--space-lg);
     padding-bottom: var(--space-md);
@@ -219,10 +290,12 @@ body {
 }
 
 @media (min-width: 640px) {
+
     .entry-header {
         flex-direction: row;
         align-items: baseline;
     }
+
 }
 
 .entry-title {
@@ -262,7 +335,11 @@ body {
     max-width: 65ch;
 }
 
-/* Project Cards */
+
+/* -------------------------------------------------------------
+   PROJECT CARDS
+------------------------------------------------------------- */
+
 .grid-2-col {
     display: grid;
     grid-template-columns: 1fr;
@@ -270,9 +347,11 @@ body {
 }
 
 @media (min-width: 768px) {
+
     .grid-2-col {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 .card {
@@ -280,6 +359,10 @@ body {
     padding: var(--space-md);
     border-radius: 8px;
     border: 1px solid var(--border-color);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card-title {
@@ -302,11 +385,16 @@ body {
     font-size: 0.875rem;
 }
 
-.inline-link:hover, .inline-link:focus-visible {
+.inline-link:hover,
+.inline-link:focus-visible {
     text-decoration: underline;
 }
 
-/* Tags & Skills */
+
+/* -------------------------------------------------------------
+   TAGS & SKILLS
+------------------------------------------------------------- */
+
 .tags {
     margin-top: 0.75rem;
 }
@@ -329,9 +417,11 @@ body {
 }
 
 @media (min-width: 640px) {
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 .skill-category {
@@ -358,7 +448,11 @@ body {
     font-size: 0.95rem;
 }
 
-/* Footer */
+
+/* -------------------------------------------------------------
+   FOOTER
+------------------------------------------------------------- */
+
 .site-footer {
     text-align: left;
     padding-top: var(--space-lg);
@@ -369,23 +463,113 @@ body {
     margin-top: var(--space-xl);
 }
 
-/* Accessibility Focus States */
-a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 4px;
-}
+
+/* -------------------------------------------------------------
+   ENTRY POINTS
+------------------------------------------------------------- */
+
 .entry-points {
     list-style: none;
     padding-left: 0;
     margin: 0.5rem 0;
 }
+
 .entry-points li {
     padding-left: 1rem;
     position: relative;
     opacity: 0.85;
 }
+
 .entry-points li::before {
     content: "–";
     position: absolute;
     left: 0;
+}
+
+
+/* -------------------------------------------------------------
+   THEME TOGGLE
+------------------------------------------------------------- */
+
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#theme-toggle {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+#theme-toggle:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+#theme-toggle svg {
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Light mode: show moon */
+.icon-moon {
+    display: block;
+}
+
+.icon-sun {
+    display: none;
+}
+
+
+/* Dark mode: show sun */
+[data-theme="dark"] .icon-moon {
+    display: none;
+}
+
+[data-theme="dark"] .icon-sun {
+    display: block;
+}
+
+
+/* -------------------------------------------------------------
+   ACCESSIBILITY FOCUS STATES
+------------------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }
